@@ -21,6 +21,7 @@ import edu.wpi.first.wpilibj.Threads;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import edu.wpi.first.wpilibj2.command.button.RobotModeTriggers;
 import frc.robot.constants.TunerConstants;
 import frc.robot.subsystems.Autoaim;
 import frc.robot.subsystems.Drivetrain;
@@ -56,6 +57,8 @@ public class Robot extends LoggedRobot {
 
     private final AutoFactory autoFactory;
     private final AutoChooser autoChooser;
+
+    private final Autos autos;
 
     private CommandXboxController joystick = new CommandXboxController(0);
 
@@ -99,9 +102,16 @@ public class Robot extends LoggedRobot {
             true, // If alliance flipping should be enabled 
             drivetrain // The drive subsystem
         );
+
+        autos = new Autos(autoFactory, subsystemManager);
         
         autoChooser = new AutoChooser();
-        
+
+        autoChooser.addRoutine("LT_DoubleSweepReturn", autos::LT_DoubleSweepReturn);
+        autoChooser.addRoutine("RT_DoubleSweepReturn", autos::RT_DoubleSweepReturn);
+
+        RobotModeTriggers.autonomous().whileTrue(autoChooser.selectedCommandScheduler());
+
         SmartDashboard.putData("AutoChooser", autoChooser);
 
         Threads.setCurrentThreadPriority(true, 5);

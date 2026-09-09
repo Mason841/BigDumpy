@@ -1,0 +1,113 @@
+{
+ "name":"2026-bigdumpy",
+ "version":2,
+ "type":"Swerve",
+ "variables":{
+  "expressions":{},
+  "poses":{
+   "LeftHubFire":{
+    "x":{
+     "exp":"3.1 m",
+     "val":3.1
+    },
+    "y":{
+     "exp":"5.5 m",
+     "val":5.5
+    },
+    "heading":{
+     "exp":"-45 deg",
+     "val":-0.7853981633974483
+    }
+   },
+   "LeftTrenchStart":{
+    "x":{
+     "exp":"4.42 m",
+     "val":4.42
+    },
+    "y":{
+     "exp":"7.25 m",
+     "val":7.25
+    },
+    "heading":{
+     "exp":"180 deg",
+     "val":3.141592653589793
+    }
+   }
+  }
+ },
+ "config":{
+  "frontLeft":{
+   "x":{
+    "exp":"10.375 in",
+    "val":0.263525
+   },
+   "y":{
+    "exp":"11.375 in",
+    "val":0.288925
+   }
+  },
+  "backLeft":{
+   "x":{
+    "exp":"-10.375 in",
+    "val":-0.263525
+   },
+   "y":{
+    "exp":"11.375 in",
+    "val":0.288925
+   }
+  },
+  "mass":{
+   "exp":"145 lbs",
+   "val":65.77089365
+  },
+  "inertia":{
+   "exp":"7 kg m ^ 2",
+   "val":7.0
+  },
+  "gearing":{
+   "exp":"6.03",
+   "val":6.03
+  },
+  "radius":{
+   "exp":"2 in",
+   "val":0.0508
+  },
+  "vmax":{
+   "exp":"4000 RPM",
+   "val":418.87902047863906
+  },
+  "tmax":{
+   "exp":"0.8 N * m",
+   "val":0.8
+  },
+  "cof":{
+   "exp":"1.1",
+   "val":1.1
+  },
+  "bumper":{
+   "front":{
+    "exp":"17.375 in",
+    "val":0.441325
+   },
+   "side":{
+    "exp":"16.375 in",
+    "val":0.415925
+   },
+   "back":{
+    "exp":"17.375 in",
+    "val":0.441325
+   }
+  },
+  "differentialTrackWidth":{
+   "exp":"22 in",
+   "val":0.5588
+  }
+ },
+ "generationFeatures":[],
+ "codegen":{
+  "root":"../C:/Users/anonymous/Documents/Git/2026 Robot Repositories/BigDumpy/src/main/deploy/choreo",
+  "genVars":true,
+  "genTrajData":true,
+  "useChoreoLib":true
+ }
+}

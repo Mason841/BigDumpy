@@ -13,6 +13,10 @@ public class RobotConstants {
         return alliance.filter(value -> value == DriverStation.Alliance.Red).isPresent();
     };
 
+    public static BooleanSupplier isAuto = () -> {
+        return DriverStation.isAutonomousEnabled();
+    };
+
     public static class Vision {
 
         public static final String limelightName = "limelight-front";

@@ -99,7 +99,7 @@ public class SubsystemManager extends SubsystemBase {
 					IntakeRackState.STOP, 
 					IntakeRollerState.STOP, 
 					RollerFloorState.STOP, 
-					ShooterState.STOP);
+					ShooterState.STOP);				
 				break;
 
 			case IDLE:
@@ -114,39 +114,82 @@ public class SubsystemManager extends SubsystemBase {
 				break;
 
 			case DRIVING_STOWED:
-				this.setSubsystemStates(
-					DriveState.DRIVE_JOYSTICKS, 
+				if (RobotConstants.isAuto.getAsBoolean()) {
+					this.setSubsystemStates(
+					DriveState.AUTO, 
 					HoodState.TRENCH, 
 					IndexerState.STOP, 
 					IntakeRackState.STOWED_FIRING, 
 					IntakeRollerState.STOP, 
 					RollerFloorState.STOP, 
 					ShooterState.FOLLOW_AUTOAIM_SLOW);
+				} else {
+					this.setSubsystemStates(
+						DriveState.DRIVE_JOYSTICKS, 
+						HoodState.TRENCH, 
+						IndexerState.STOP, 
+						IntakeRackState.STOWED_FIRING, 
+						IntakeRollerState.STOP, 
+						RollerFloorState.STOP, 
+						ShooterState.FOLLOW_AUTOAIM_SLOW);
+				}
 				break;
 
 			case DRIVING_IDLE:
-				this.setSubsystemStates(
-					DriveState.DRIVE_JOYSTICKS, 
-					HoodState.TRENCH, 
-					IndexerState.STOP, 
-					IntakeRackState.STOP, 
-					IntakeRollerState.STOP, 
-					RollerFloorState.STOP, 
-					ShooterState.FOLLOW_AUTOAIM_SLOW);
+				if (RobotConstants.isAuto.getAsBoolean()) {
+					this.setSubsystemStates(
+						DriveState.AUTO, 
+						HoodState.TRENCH, 
+						IndexerState.STOP, 
+						IntakeRackState.STOP, 
+						IntakeRollerState.STOP, 
+						RollerFloorState.STOP, 
+						ShooterState.FOLLOW_AUTOAIM_SLOW);
+				} else {
+					this.setSubsystemStates(
+						DriveState.DRIVE_JOYSTICKS, 
+						HoodState.TRENCH, 
+						IndexerState.STOP, 
+						IntakeRackState.STOP, 
+						IntakeRollerState.STOP, 
+						RollerFloorState.STOP, 
+						ShooterState.FOLLOW_AUTOAIM_SLOW);
+				}
 				break;
 
 			case DRIVING_INTAKING:
-				this.setSubsystemStates(
-					DriveState.DRIVE_JOYSTICKS, 
-					HoodState.TRENCH, 
-					IndexerState.STOP, 
-					IntakeRackState.EXTENDED_FULL, 
-					IntakeRollerState.FORWARD_FULLSPEED, 
-					RollerFloorState.STOP, 
-					ShooterState.FOLLOW_AUTOAIM_SLOW);
+				if (RobotConstants.isAuto.getAsBoolean()) {
+					this.setSubsystemStates(
+						DriveState.AUTO, 
+						HoodState.TRENCH, 
+						IndexerState.STOP, 
+						IntakeRackState.EXTENDED_FULL, 
+						IntakeRollerState.FORWARD_FULLSPEED, 
+						RollerFloorState.STOP, 
+						ShooterState.FOLLOW_AUTOAIM_SLOW);
+				} else {
+					this.setSubsystemStates(
+						DriveState.DRIVE_JOYSTICKS, 
+						HoodState.TRENCH, 
+						IndexerState.STOP, 
+						IntakeRackState.EXTENDED_FULL, 
+						IntakeRollerState.FORWARD_FULLSPEED, 
+						RollerFloorState.STOP, 
+						ShooterState.FOLLOW_AUTOAIM_SLOW);
+				}
 				break;
 
 			case DRIVING_INTAKEDEPLOYED:
+				if (RobotConstants.isAuto.getAsBoolean()) {
+					this.setSubsystemStates(
+						DriveState.AUTO, 
+						HoodState.TRENCH, 
+						IndexerState.STOP, 
+						IntakeRackState.EXTENDED_FULL, 
+						IntakeRollerState.STOP, 
+						RollerFloorState.STOP, 
+						ShooterState.FOLLOW_AUTOAIM_SLOW);
+				}
 				this.setSubsystemStates(
 					DriveState.DRIVE_JOYSTICKS, 
 					HoodState.TRENCH, 
@@ -158,14 +201,25 @@ public class SubsystemManager extends SubsystemBase {
 				break;
 
 			case DRIVING_REVERSEINTAKING:
-				this.setSubsystemStates(
-					DriveState.DRIVE_JOYSTICKS, 
-					HoodState.TRENCH, 
-					IndexerState.REVERSE_SLOW, 
-					IntakeRackState.EXTENDED_FULL, 
-					IntakeRollerState.REVERSE_FULLSPEED, 
-					RollerFloorState.REVERSE_FULLSPEED, 
-					ShooterState.FOLLOW_AUTOAIM_SLOW);
+				if (RobotConstants.isAuto.getAsBoolean()) {
+					this.setSubsystemStates(
+						DriveState.AUTO, 
+						HoodState.TRENCH, 
+						IndexerState.REVERSE_SLOW, 
+						IntakeRackState.EXTENDED_FULL, 
+						IntakeRollerState.REVERSE_FULLSPEED, 
+						RollerFloorState.REVERSE_FULLSPEED, 
+						ShooterState.FOLLOW_AUTOAIM_SLOW);
+				} else {
+					this.setSubsystemStates(
+						DriveState.DRIVE_JOYSTICKS, 
+						HoodState.TRENCH, 
+						IndexerState.REVERSE_SLOW, 
+						IntakeRackState.EXTENDED_FULL, 
+						IntakeRollerState.REVERSE_FULLSPEED, 
+						RollerFloorState.REVERSE_FULLSPEED, 
+						ShooterState.FOLLOW_AUTOAIM_SLOW);
+				}
 				break;
 
 			case DRIVING_SCORING:
