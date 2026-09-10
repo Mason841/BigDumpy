@@ -4,14 +4,7 @@ import choreo.auto.AutoFactory;
 import choreo.auto.AutoRoutine;
 import choreo.auto.AutoTrajectory;
 import edu.wpi.first.wpilibj2.command.Commands;
-import frc.robot.subsystems.Autoaim;
-import frc.robot.subsystems.Drivetrain;
-import frc.robot.subsystems.Hood;
-import frc.robot.subsystems.Indexer;
-import frc.robot.subsystems.IntakeRack;
-import frc.robot.subsystems.IntakeRoller;
-import frc.robot.subsystems.RollerFloor;
-import frc.robot.subsystems.Shooter;
+
 import frc.robot.subsystems.SubsystemManager;
 import frc.robot.subsystems.SubsystemManager.RobotState;
 

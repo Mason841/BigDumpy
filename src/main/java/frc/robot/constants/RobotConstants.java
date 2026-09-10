@@ -21,7 +21,7 @@ public class RobotConstants {
 
         public static final String limelightName = "limelight-front";
 
-        public static final double[] limelightPose = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+        public static final double[] limelightPose = {0.3406, 0.0, 0.3697, 0.0, 20.0, 0.0};
     }
 
     public static class AutoAimConstants {

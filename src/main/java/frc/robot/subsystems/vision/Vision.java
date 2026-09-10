@@ -23,8 +23,8 @@ public class Vision extends SubsystemBase {
     public static final Vector<N3> standardVisionDevs2OrMore = VecBuilder.fill(0.3, 0.3, 0.02);
     public static final Vector<N3> standardVisionDevs1tag = VecBuilder.fill(0.5, 0.5, 0.5);
 
-    public static final Vector<N3> standardVisionDevsMT2 = VecBuilder.fill(1, 1, 999);
-    public static final Vector<N3> standardVisionDevsMT1 = VecBuilder.fill(999, 999, 1);
+    public static final Vector<N3> standardVisionDevsMT2 = VecBuilder.fill(1, 1, 99999);
+    public static final Vector<N3> standardVisionDevsMT1 = VecBuilder.fill(99999, 99999, 1);
 
     public boolean disableVision = false;
     public boolean disableTurretCamera = false;
